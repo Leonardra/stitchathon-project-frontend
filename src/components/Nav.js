@@ -26,7 +26,8 @@ const Nav = () => {
           alignItems="center"
           spacing="50px"
         >
-          <Link>about</Link>
+          <Link sx={{ textDecoration: "none", cursor: "pointer" }} ><Typography fontWeight="400"
+            fontSize="18px" color="#000">about</Typography></Link>
           <Stack
             direction="row"
             justifyContent="space-between"
@@ -37,12 +38,12 @@ const Nav = () => {
               fontSize="18px">menu</Typography>
             <Card
               elevation={0}
-            sx={{height: "100px", width: "100px"}}
-              backgroundColor={rotate===0? "#fff" : "#000"}
-              onMouseEnter={() => { setRotate(45) }}
-              onMouseLeave={() => { setRotate(0) }}
+              onMouseEnter={() => { setRotate(45); setSpace(0) }}
+              onMouseLeave={() => { setRotate(0); setSpace(7) }}
+              sx={{ background: space === 7 ? "#fff" : "#000", borderRadius: "100%" }}
             >
               <Stack
+                sx={{ height: "70px", width: "70px" }}
                 spacing={`${space}px`}
                 justifyContent="center"
                 alignItems="center"
@@ -50,14 +51,13 @@ const Nav = () => {
                 <Box
                   width="45px"
                   height="2px"
-                  backgroundColor="#000"
-                  sx={{ transform: `rotate(${rotate}deg)` }}
+                  sx={{ background: space === 7 ? "#000" : "#fff", transform: `rotate(${rotate}deg)` }}
                 />
                 <Box
                   width="45px"
                   height="2px"
                   backgroundColor="#000"
-                  sx={{ transform: `rotate(-${rotate}deg)` }}
+                  sx={{ background: space === 7 ? "#000" : "#fff", transform: `rotate(-${rotate}deg)` }}
                 />
               </Stack>
             </Card>

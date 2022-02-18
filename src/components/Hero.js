@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Stack, Typography, Box, Grid } from "@mui/material";
+import { Container, Stack, Typography, Box, Grid, Link } from "@mui/material";
 const Hero = () => {
   return (
     <Container>
@@ -20,65 +20,70 @@ const Hero = () => {
             direction="row"
             justifyContent="space-between"
             alignItems="center"
-          >
-            <Grid>
+          > <Grid>
               <Box>
-                <Typography
-                  fontWeight="400"
-                  color="#d3d3d3"
-                  fontSize="100px"
-                  sx={{
-                    transition: "font-size 0.5s ease",
-                    pointer: "cursor",
-                    "&:hover": {
-                      color: "#000",
-                      fontWeight: "700"
-                    },
-                  }}
-                >
-                  Recharge
-                </Typography>
+                <Link sx={{ textDecoration: "none", cursor: "pointer" }} >
+                  <Typography
+                    fontWeight="400"
+                    color="#d3d3d3"
+                    fontSize="100px"
+                    sx={{
+                      transition: "font-size 0.5s ease",
+                      pointer: "cursor",
+                      "&:hover": {
+                        color: "#000",
+                        fontWeight: "700"
+                      },
+                    }}
+                  >
+                    Recharge
+                  </Typography>
+                </Link>
               </Box>
             </Grid>
             <Grid>
               <Box>
-                <Typography
-                  fontWeight="400"
-                  color="#d3d3d3"
-                  fontSize="100px"
-                  sx={{
-                    transition: "font-size 0.5s ease",
-                    pointer: "cursor",
-                    "&:hover": {
-                      color: "#000",
-                      fontWeight: "700"
-                    },
-                  }}
-                >
-                  Transfer
-                </Typography>
+                <Link sx={{ textDecoration: "none", cursor: "pointer" }} >
+                  <Typography
+                    fontWeight="400"
+                    color="#d3d3d3"
+                    fontSize="100px"
+                    sx={{
+                      transition: "font-size 0.5s ease",
+                      pointer: "cursor",
+                      "&:hover": {
+                        color: "#000",
+                        fontWeight: "700"
+                      },
+                    }}
+                  >
+                    Transfer
+                  </Typography>
+                </Link>
               </Box>
             </Grid>
             <Grid>
               <Box>
-                <Typography
-                  fontWeight="400"
-                  color="#d3d3d3"
-                  fontSize="100px"
-                  sx={{
-                    transition: "font-size 0.5s ease",
-                    pointer: "cursor",
-                    "&:hover": {
-                      color: "#000",
-                      fontWeight: "700"
-                    },
-                  }}
-                >
-                  Bills
-                </Typography>
+                <Link sx={{ textDecoration: "none", cursor: "pointer" }} >
+                  <Typography
+                    fontWeight="400"
+                    color="#d3d3d3"
+                    fontSize="100px"
+                    sx={{
+                      transition: "font-size 0.5s ease",
+                      pointer: "cursor",
+                      "&:hover": {
+                        color: "#000",
+                        fontWeight: "700"
+                      },
+                    }}
+                  >
+                    Bills
+                  </Typography>
+                </Link>
               </Box>
             </Grid>
-          </Grid>
+          </Grid >
         </Stack>
         <Stack sx={{ mt: "300px" }} width="800px">
           <Typography fontWeight="400"
