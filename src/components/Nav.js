@@ -8,7 +8,7 @@ const Nav = () => {
   const [rotate, setRotate] = useState(0);
   const [space, setSpace] = useState(7);
   return (
-    <Container sx={{ mt: "56px" }} >
+    <Container sx={{ mt: "56px" }}>
       <Stack direction="row" justifyContent="space-between" alignItems="center">
         <Stack
           direction="row"
@@ -17,8 +17,9 @@ const Nav = () => {
           spacing="10px"
         >
           <img src={Logo} alt="logo" />
-          <Typography fontWeight="500"
-            fontSize="40px">Stitchr</Typography>
+          <Typography fontWeight="500" fontSize="40px">
+            Stitchr
+          </Typography>
         </Stack>
         <Stack
           direction="row"
@@ -33,14 +34,19 @@ const Nav = () => {
             alignItems="center"
             spacing="12px"
           >
-            <Typography fontWeight="400"
-              fontSize="18px">menu</Typography>
+            <Typography fontWeight="400" fontSize="18px">
+              menu
+            </Typography>
             <Card
               elevation={0}
-            sx={{height: "100px", width: "100px"}}
-              backgroundColor={rotate===0? "#fff" : "#000"}
-              onMouseEnter={() => { setRotate(45) }}
-              onMouseLeave={() => { setRotate(0) }}
+              sx={{ height: "100px", width: "100px" }}
+              backgroundColor={rotate === 0 ? "#fff" : "#000"}
+              onMouseEnter={() => {
+                setRotate(45);
+              }}
+              onMouseLeave={() => {
+                setRotate(0);
+              }}
             >
               <Stack
                 spacing={`${space}px`}

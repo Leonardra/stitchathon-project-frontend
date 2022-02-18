@@ -10,12 +10,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <LandingPage />
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/about-us" />
-        <Route path="/pay-bills"/>
-        <Route path="/transfer"/>
+        <Route path="/pay-bills" />
+        <Route path="/transfer" />
       </Routes>
     </Router>
   </React.StrictMode>,
