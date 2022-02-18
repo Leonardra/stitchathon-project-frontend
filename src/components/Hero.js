@@ -39,12 +39,14 @@ const Hero = () => {
             <Typography
               variant="h3"
               color="#d3d3d3"
+              transition="font-weight .4s ease-out-in"
               sx={{
                 "&:hover": {
                   color: "#000",
                   textDecoration: "underline",
                   textDecorationThickness: "15%",
-                  fontWeight: "bold",
+                  fontWeight: "100",
+                  fontWeight: "900 cursor: pointer",
                 },
               }}
             >
