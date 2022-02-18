@@ -6,7 +6,7 @@ import { Box } from "@mui/system";
 
 const Nav = () => {
   return (
-    <Container sx={{ mt: "56px" }}>
+    <Container sx={{ mt: "56px" }} >
       <Stack direction="row" justifyContent="space-between" alignItems="center">
         <Stack
           direction="row"
