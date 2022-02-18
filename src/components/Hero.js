@@ -17,21 +17,10 @@ const Hero = () => {
             justifyContent="space-between"
             alignContent="center"
           >
-            <Typography
-              variant="h3"
-              color="#d3d3d3"
-              spacing="71px"
-              sx={{
-                "&:hover": {
-                  color: "#000",
-                  textDecoration: "underline",
-                  textDecorationThickness: "15%",
-                  fontWeight: "bold",
-                },
-              }}
-            >
-              Pay Bills
-            </Typography>
+            <Box>
+
+            </Box>
+         
             <Typography
               variant="h3"
               color="#d3d3d3"
