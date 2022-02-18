@@ -1,6 +1,5 @@
 import React from "react";
-import { Container, Stack, Typography } from "@mui/material";
-import { color } from "@mui/system";
+import { Container, Stack, Typography, Box, Grid } from "@mui/material";
 const Hero = () => {
   return (
     <Container>
@@ -11,54 +10,83 @@ const Hero = () => {
           sx={{ mt: "150px" }}
           alignContent="center"
         >
-          <Typography variant="h6">We make it happen</Typography>
-          <Stack
+          <Typography
+            fontWeight="400"
+            fontSize="18px"
+          >We make it happen</Typography>
+          <Grid
+            lg={12}
+            container
             direction="row"
             justifyContent="space-between"
-            alignContent="center"
+            alignItems="center"
           >
-            <Box>
-
-            </Box>
-         
-            <Typography
-              variant="h3"
-              color="#d3d3d3"
-              spacing="71px"
-              sx={{
-                "&:hover": {
-                  color: "#000",
-                  textDecoration: "underline",
-                  textDecorationThickness: "15%",
-                  fontWeight: "bold",
-                },
-              }}
-            >
-              Recharge
-            </Typography>
-            <Typography
-              variant="h3"
-              color="#d3d3d3"
-              transition="font-weight .4s ease-out-in"
-              sx={{
-                "&:hover": {
-                  color: "#000",
-                  textDecoration: "underline",
-                  textDecorationThickness: "15%",
-                  fontWeight: "100",
-                  fontWeight: "900 cursor: pointer",
-                },
-              }}
-            >
-              Transfer
-            </Typography>
-          </Stack>
+            <Grid>
+              <Box>
+                <Typography
+                  fontWeight="400"
+                  color="#d3d3d3"
+                  fontSize="100px"
+                  sx={{
+                    transition: "font-size 0.5s ease",
+                    pointer: "cursor",
+                    "&:hover": {
+                      color: "#000",
+                      fontWeight: "700"
+                    },
+                  }}
+                >
+                  Recharge
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid>
+              <Box>
+                <Typography
+                  fontWeight="400"
+                  color="#d3d3d3"
+                  fontSize="100px"
+                  sx={{
+                    transition: "font-size 0.5s ease",
+                    pointer: "cursor",
+                    "&:hover": {
+                      color: "#000",
+                      fontWeight: "700"
+                    },
+                  }}
+                >
+                  Transfer
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid>
+              <Box>
+                <Typography
+                  fontWeight="400"
+                  color="#d3d3d3"
+                  fontSize="100px"
+                  sx={{
+                    transition: "font-size 0.5s ease",
+                    pointer: "cursor",
+                    "&:hover": {
+                      color: "#000",
+                      fontWeight: "700"
+                    },
+                  }}
+                >
+                  Bills
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
         </Stack>
-        <Stack sx={{ mt: "100px" }} width="800px">
-          <Typography variant="p" fontWeight="semi-bold">
+        <Stack sx={{ mt: "300px" }} width="800px">
+          <Typography fontWeight="400"
+            fontSize="18px">
             Leading payment system with one solid payment
           </Typography>
-          <Typography variant="p" fontWeight="semi-bold">
+          <Typography fontWeight="400"
+            fontSize="18px">
             infrastructure. We help you pay with your stitched accounts.
           </Typography>
         </Stack>
