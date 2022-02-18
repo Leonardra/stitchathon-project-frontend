@@ -1,6 +1,9 @@
 import React from "react";
 import { Container, Stack, Typography, Box, Grid, Link } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 const Hero = () => {
+
+  const navigate = useNavigate();
   return (
     <Container>
       <Stack direction="column">
@@ -22,7 +25,10 @@ const Hero = () => {
             alignItems="center"
           > <Grid>
               <Box>
-                <Link sx={{ textDecoration: "none", cursor: "pointer" }} >
+                <Link sx={{ textDecoration: "none", cursor: "pointer" }}
+                  onClick={
+                    () => navigate('/recharge')
+                  } >
                   <Typography
                     fontWeight="400"
                     color="#d3d3d3"
