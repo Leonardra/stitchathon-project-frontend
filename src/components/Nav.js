@@ -1,21 +1,28 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../assets/Vector.svg";
-import { Grid, Container, Link, Stack, Typography, Card, Drawer } from "@mui/material";
+import {
+  Grid,
+  Container,
+  Link,
+  Stack,
+  Typography,
+  Card,
+  Drawer,
+} from "@mui/material";
 import { Box } from "@mui/system";
 import { useNavigate } from "react-router-dom";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 
 const Nav = () => {
   const navigate = useNavigate();
   const [rotate, setRotate] = useState(0);
   const [space, setSpace] = useState(7);
-  const [openDrawer, setOpenDrawer] = useState(false)
-  const [hover, setHover] = useState(false)
+  const [openDrawer, setOpenDrawer] = useState(false);
+  const [hover, setHover] = useState(false);
   useEffect(() => {
     AOS.init({
-      duration: 3000
+      duration: 3000,
     });
     AOS.refresh();
   }, []);
@@ -153,7 +160,7 @@ const Nav = () => {
               <Link
                 sx={{ textDecoration: "none", cursor: "pointer" }}
                 onClick={() => {
-                  navigate("/recharge");
+                  navigate("/contact-us");
                   setOpenDrawer(false);
                 }}
               >
