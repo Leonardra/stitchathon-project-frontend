@@ -6,7 +6,6 @@ import Hero from "./Hero";
 const LandingPage = () => {
   return (
     <>
-      <Nav />
       <Hero />
     </>
   );
