@@ -207,7 +207,6 @@ const Nav = () => {
               </Link>
             </Grid>
             <Grid item data-aos="fade-left">
-<<<<<<< HEAD
               <Link sx={{ textDecoration: "none", cursor: "pointer" }}
                 onClick={
                   () => {
@@ -215,15 +214,6 @@ const Nav = () => {
                     setOpenDrawer(false)
                   }
                 } >
-=======
-              <Link
-                sx={{ textDecoration: "none", cursor: "pointer" }}
-                onClick={() => {
-                  navigate("/recharge");
-                  setOpenDrawer(false);
-                }}
-              >
->>>>>>> 5cd58107c47f9b1a4b3c9473a94878bf232e9e48
                 <Typography
                   fontWeight="400"
                   color="#d3d3d3"
