@@ -5,9 +5,10 @@ import LandingPage from "./components/LandingPage";
 import reportWebVitals from "./reportWebVitals";
 import LoginForm from "./components/LoginForm";
 import Nav from "./components/Nav";
-import Recharge from "./components/Recharge"
-import ErrorPage from "./components/ErrorPage"
-import TeamPage from "./components/Team"
+import Recharge from "./components/Recharge";
+import ErrorPage from "./components/ErrorPage";
+import TeamPage from "./components/Team";
+import RegisterForm from "./components/RegisterForm";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 ReactDOM.render(
@@ -16,6 +17,7 @@ ReactDOM.render(
       <Nav />
       <Routes>
         <Route path="/" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm />} />
         <Route path="/stitchr" element={<LandingPage />} />
         <Route path="/about-us" />
         <Route path="/pay-bills" />
