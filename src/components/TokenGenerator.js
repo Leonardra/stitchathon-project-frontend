@@ -27,5 +27,5 @@ export async function RetrieveClientToken({ clientId, clientAssertion }) {
         throw new Error(`access_token was not found in response: ${JSON.stringify(responseBody)}`);
     }
 
-    return responseBody.access_token;
+    return responseBody;
 }

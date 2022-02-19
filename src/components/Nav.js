@@ -16,8 +16,6 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 
 const Nav = () => {
   const navigate = useNavigate();
-  const [rotate, setRotate] = useState(0);
-  const [space, setSpace] = useState(7);
   const [openDrawer, setOpenDrawer] = useState(false);
   const [hover, setHover] = useState(false);
   useEffect(() => {
@@ -207,13 +205,13 @@ const Nav = () => {
               </Link>
             </Grid>
             <Grid item data-aos="fade-left">
-              <Link
-                sx={{ textDecoration: "none", cursor: "pointer" }}
-                onClick={() => {
-                  navigate("/recharge");
-                  setOpenDrawer(false);
-                }}
-              >
+              <Link sx={{ textDecoration: "none", cursor: "pointer" }}
+                onClick={
+                  () => {
+                    navigate('/sponsor');
+                    setOpenDrawer(false)
+                  }
+                } >
                 <Typography
                   fontWeight="400"
                   color="#d3d3d3"

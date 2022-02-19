@@ -12,6 +12,7 @@ import About from "./components/About";
 import RegisterForm from "./components/RegisterForm";
 import Contact from "./components/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Transfer from "./components/Transfer";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -24,7 +25,7 @@ ReactDOM.render(
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/pay-bills" />
-        <Route path="/transfer" />
+        <Route path="/transfer" element={<Transfer />} />
         <Route path="/recharge" element={<Recharge />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="*" element={<ErrorPage />} />

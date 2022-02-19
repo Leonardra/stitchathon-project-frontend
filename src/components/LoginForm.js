@@ -22,7 +22,8 @@ const LoginForm = () => {
         let clientId = "test-e2a28368-5431-4e7e-b6bd-dc45ac5dfa71";
         let clientAssertion = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjgwNDE2MDQ5QzE0MjZDNDI0MzFGOERDMEUyRjUyQ0JEMDM1RjU1RUMifQ.eyJpYXQiOjE1OTg0NTQ0OTAsIm5iZiI6MTU5ODQ1NDQ5MCwiZXhwIjoxNTk4NDU0NzkwLCJhdWQiOiJodHRwczovL3NlY3VyZS5zdGl0Y2gubW9uZXkvY29ubmVjdC90b2tlbiIsImlzcyI6InRlc3QtZTJhMjgzNjgtNTQzMS00ZTdlLWI2YmQtZGM0NWFjNWRmYTcxIiwic3ViIjoidGVzdC1lMmEyODM2OC01NDMxLTRlN2UtYjZiZC1kYzQ1YWM1ZGZhNzEiLCJqdGkiOiJjMTZjMzAzMTcxMGI1MDk3ZDA5MmI3MmI3MGY1Yjc4NSJ9.tYFABuPfLXImaOPO8GszCijcnO3j91103JegFU2LORrXTp6EkreVKEuMmWGHxqbiFmY8m03WbFHb_thM6Vhe0pKkwHDktH7JaYvLoaEIy4R4Bj_obtJDRgEB1t1xsQGzyU4LigqVaRjoEPEOtf6LQeGYztiIPojzrKnnw8Dx404KCBGBp51L_VX_N410s3QgckYfMfjALXGkTgNYP-qvcSi4yV8tBTGaLYAbe65w1t8MNUCk9WGjT4zSHxySPIn7ILsBulVf75-Ro4SKU1Rhk9X534-NLHmgyR_syvXVwTQy_Z8PgHtihOCSSbrkrW-y-q2SFOEe5qmpKMEmQragNw";
         let resultFromPromise = RetrieveClientToken(clientId = clientId, clientAssertion = clientAssertion);
-        console.log("response:   ", resultFromPromise)
+        // console.log("response:   ", resultFromPromise)
+        alert(JSON.stringify(resultFromPromise, null, 2));
     };
     const formik = useFormik({
         initialValues: {
