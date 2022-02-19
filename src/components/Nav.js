@@ -24,6 +24,10 @@ const Nav = () => {
     });
     AOS.refresh();
   }, []);
+
+  const GoHome = () => {
+    navigate("/stitchr");
+  };
   return (
     <>
       <Container sx={{ mt: "56px" }}>
@@ -32,17 +36,23 @@ const Nav = () => {
           justifyContent="space-between"
           alignItems="center"
         >
-          <Stack
-            direction="row"
-            justifyContent="space-between"
-            alignItems="center"
-            spacing="10px"
+          <Link
+            sx={{ textDecoration: "none", cursor: "pointer" }}
+            onClick={GoHome}
           >
-            <img src={Logo} alt="logo" />
-            <Typography fontWeight="500" fontSize="40px">
-              Stitchr
-            </Typography>
-          </Stack>
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              alignItems="center"
+              spacing="10px"
+            >
+              <img src={Logo} alt="logo" />
+              <Typography fontWeight="500" fontSize="40px" color="#000">
+                Stitchr
+              </Typography>
+            </Stack>
+          </Link>
+
           <Stack
             direction="row"
             justifyContent="space-between"
@@ -205,13 +215,13 @@ const Nav = () => {
               </Link>
             </Grid>
             <Grid item data-aos="fade-left">
-              <Link sx={{ textDecoration: "none", cursor: "pointer" }}
-                onClick={
-                  () => {
-                    navigate('/sponsor');
-                    setOpenDrawer(false)
-                  }
-                } >
+              <Link
+                sx={{ textDecoration: "none", cursor: "pointer" }}
+                onClick={() => {
+                  navigate("/sponsor");
+                  setOpenDrawer(false);
+                }}
+              >
                 <Typography
                   fontWeight="400"
                   color="#d3d3d3"
@@ -229,6 +239,30 @@ const Nav = () => {
                 </Typography>
               </Link>
             </Grid>
+            <Stack direction="row" spacing={7} marginTop={8} alignText="center">
+              <Link
+                sx={{ textDecoration: "none", cursor: "pointer" }}
+                onClick={() => {
+                  navigate("/login");
+                  setOpenDrawer(false);
+                }}
+              >
+                <Typography fontWeight="400" fontSize="25px" color="#000">
+                  Log in
+                </Typography>
+              </Link>
+              <Link
+                sx={{ textDecoration: "none", cursor: "pointer" }}
+                onClick={() => {
+                  navigate("/register");
+                  setOpenDrawer(false);
+                }}
+              >
+                <Typography fontWeight="400" fontSize="25px" color="#000">
+                  Sign up
+                </Typography>
+              </Link>
+            </Stack>
           </Grid>
         </Box>
       </Drawer>

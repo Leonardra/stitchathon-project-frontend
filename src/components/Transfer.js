@@ -5,6 +5,7 @@ import { TextField, Button, Grid, Typography, Stack, Box, MenuItem, Link, Card }
 import { useNavigate } from 'react-router-dom';
 import Modal from '@mui/material/Modal';
 import Logo from "../assets/Vector.svg";
+import CreditCardOutlinedIcon from '@mui/icons-material/CreditCardOutlined';
 
 const style = {
   position: 'absolute',
@@ -163,7 +164,45 @@ const Transfer = () => {
           >
             <Grid item>
               <Card sx={{
-                padding: 7
+                padding: 5,
+                borderRadius: 10
+              }} >
+                <Link
+                  sx={{ textDecoration: "none", cursor: "pointer" }}
+                  onClick={() => navigate("/recharge")}
+                >
+                  <Stack direction="row" spacing={2}>
+                    <img src={Logo} />
+                  </Stack>
+                </Link>
+              </Card>
+            </Grid>
+            <Grid item>
+              <Card sx={{
+                padding: 5,
+                borderRadius: 10
+              }} >
+                <Link
+                  sx={{ textDecoration: "none", cursor: "pointer" }}
+                  onClick={() => navigate("/recharge")}
+                >
+                  <Stack direction="row" spacing={2}>
+                    <CreditCardOutlinedIcon color="#000" />
+                    <Typography
+                      fontWeight="400"
+                      color="#000"
+                      fontSize="50px"
+                    >
+                      Credit
+                    </Typography>
+                  </Stack>
+                </Link>
+              </Card>
+            </Grid>
+            <Grid item>
+              <Card sx={{
+                padding: 5,
+                borderRadius: 10
               }} >
                 <Link
                   sx={{ textDecoration: "none", cursor: "pointer" }}
@@ -175,16 +214,8 @@ const Transfer = () => {
                       fontWeight="400"
                       color="#000"
                       fontSize="50px"
-                      sx={{
-                        transition: "font-size 0.5s ease",
-                        pointer: "cursor",
-                        "&:hover": {
-                          color: "#000",
-                          fontWeight: "700",
-                        },
-                      }}
                     >
-                      Stitch
+                      Others
                     </Typography>
                   </Stack>
                 </Link>
