@@ -12,6 +12,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 const validationSchema = yup.object({
+  userName: yup.string("Enter your username").required("Username is required"),
   email: yup
     .string("Enter your email")
     .email("Enter a valid email")
@@ -25,6 +26,7 @@ const validationSchema = yup.object({
 const RegisterForm = () => {
   const formik = useFormik({
     initialValues: {
+      userName: "",
       email: "",
       password: "",
     },
@@ -72,7 +74,23 @@ const RegisterForm = () => {
       </Stack>
       <form onSubmit={formik.handleSubmit}>
         <Grid container marginTop={10}>
-          <Grid Item lg={12}>
+          <Grid item lg={12}>
+            <TextField
+              fullWidth
+              id="outlined-basic"
+              variant="outlined"
+              id="userName"
+              name="userName"
+              label="Username"
+              type="userName"
+              placeholder="enter username"
+              value={formik.values.userName}
+              onChange={formik.handleChange}
+              error={formik.touched.userName && Boolean(formik.errors.userName)}
+              helperText={formik.touched.userName && formik.errors.userName}
+            />
+          </Grid>
+          <Grid Item lg={12} marginTop={5}>
             <TextField
               fullWidth
               id="outlined-basic"
@@ -110,7 +128,7 @@ const RegisterForm = () => {
               type="submit"
               sx={{ background: "#000", height: 60 }}
             >
-              Login
+              Register
             </Button>
           </Grid>
         </Grid>
