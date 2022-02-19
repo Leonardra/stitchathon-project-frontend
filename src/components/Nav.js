@@ -207,13 +207,13 @@ const Nav = () => {
               </Link>
             </Grid>
             <Grid item data-aos="fade-left">
-              <Link sx={{ textDecoration: "none", cursor: "pointer" }}
-                onClick={
-                  () => {
-                    navigate('/sponsor');
-                    setOpenDrawer(false)
-                  }
-                } >
+              <Link
+                sx={{ textDecoration: "none", cursor: "pointer" }}
+                onClick={() => {
+                  navigate("/sponsor");
+                  setOpenDrawer(false);
+                }}
+              >
                 <Typography
                   fontWeight="400"
                   color="#d3d3d3"
@@ -231,6 +231,30 @@ const Nav = () => {
                 </Typography>
               </Link>
             </Grid>
+            <Stack direction="row" spacing={7} marginTop={8} alignText="center">
+              <Link
+                sx={{ textDecoration: "none", cursor: "pointer" }}
+                onClick={() => {
+                  navigate("/login");
+                  setOpenDrawer(false);
+                }}
+              >
+                <Typography fontWeight="400" fontSize="25px" color="#000">
+                  Log in
+                </Typography>
+              </Link>
+              <Link
+                sx={{ textDecoration: "none", cursor: "pointer" }}
+                onClick={() => {
+                  navigate("/register");
+                  setOpenDrawer(false);
+                }}
+              >
+                <Typography fontWeight="400" fontSize="25px" color="#000">
+                  Sign up
+                </Typography>
+              </Link>
+            </Stack>
           </Grid>
         </Box>
       </Drawer>
