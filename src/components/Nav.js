@@ -26,6 +26,10 @@ const Nav = () => {
     });
     AOS.refresh();
   }, []);
+
+  const GoHome = () => {
+    navigate("/stitchr");
+  };
   return (
     <>
       <Container sx={{ mt: "56px" }}>
@@ -34,17 +38,23 @@ const Nav = () => {
           justifyContent="space-between"
           alignItems="center"
         >
-          <Stack
-            direction="row"
-            justifyContent="space-between"
-            alignItems="center"
-            spacing="10px"
+          <Link
+            sx={{ textDecoration: "none", cursor: "pointer" }}
+            onClick={GoHome}
           >
-            <img src={Logo} alt="logo" />
-            <Typography fontWeight="500" fontSize="40px">
-              Stitchr
-            </Typography>
-          </Stack>
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              alignItems="center"
+              spacing="10px"
+            >
+              <img src={Logo} alt="logo" />
+              <Typography fontWeight="500" fontSize="40px" color="#000">
+                Stitchr
+              </Typography>
+            </Stack>
+          </Link>
+
           <Stack
             direction="row"
             justifyContent="space-between"
