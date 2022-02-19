@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Stack, Typography, Box, Grid, Link } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 const Hero = () => {
-
   const navigate = useNavigate();
   return (
     <Container>
@@ -13,22 +12,23 @@ const Hero = () => {
           sx={{ mt: "150px" }}
           alignContent="center"
         >
-          <Typography
-            fontWeight="400"
-            fontSize="18px"
-          >We make it happen</Typography>
+          <Typography fontWeight="400" fontSize="18px">
+            We make it happen
+          </Typography>
           <Grid
             lg={12}
             container
             direction="row"
             justifyContent="space-between"
             alignItems="center"
-          > <Grid>
+          >
+            {" "}
+            <Grid>
               <Box>
-                <Link sx={{ textDecoration: "none", cursor: "pointer" }}
-                  onClick={
-                    () => navigate('/recharge')
-                  } >
+                <Link
+                  sx={{ textDecoration: "none", cursor: "pointer" }}
+                  onClick={() => navigate("/recharge")}
+                >
                   <Typography
                     fontWeight="400"
                     color="#d3d3d3"
@@ -38,7 +38,7 @@ const Hero = () => {
                       pointer: "cursor",
                       "&:hover": {
                         color: "#000",
-                        fontWeight: "700"
+                        fontWeight: "700",
                       },
                     }}
                   >
@@ -49,7 +49,10 @@ const Hero = () => {
             </Grid>
             <Grid>
               <Box>
-                <Link sx={{ textDecoration: "none", cursor: "pointer" }} >
+                <Link
+                  sx={{ textDecoration: "none", cursor: "pointer" }}
+                  onClick={() => navigate("/transfer")}
+                >
                   <Typography
                     fontWeight="400"
                     color="#d3d3d3"
@@ -59,7 +62,7 @@ const Hero = () => {
                       pointer: "cursor",
                       "&:hover": {
                         color: "#000",
-                        fontWeight: "700"
+                        fontWeight: "700",
                       },
                     }}
                   >
@@ -70,7 +73,7 @@ const Hero = () => {
             </Grid>
             <Grid>
               <Box>
-                <Link sx={{ textDecoration: "none", cursor: "pointer" }} >
+                <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
                   <Typography
                     fontWeight="400"
                     color="#d3d3d3"
@@ -80,7 +83,7 @@ const Hero = () => {
                       pointer: "cursor",
                       "&:hover": {
                         color: "#000",
-                        fontWeight: "700"
+                        fontWeight: "700",
                       },
                     }}
                   >
@@ -89,15 +92,13 @@ const Hero = () => {
                 </Link>
               </Box>
             </Grid>
-          </Grid >
+          </Grid>
         </Stack>
         <Stack sx={{ mt: "300px" }} width="800px">
-          <Typography fontWeight="400"
-            fontSize="18px">
+          <Typography fontWeight="400" fontSize="18px">
             Leading payment system with one solid payment
           </Typography>
-          <Typography fontWeight="400"
-            fontSize="18px">
+          <Typography fontWeight="400" fontSize="18px">
             infrastructure. We help you pay with your stitched accounts.
           </Typography>
         </Stack>

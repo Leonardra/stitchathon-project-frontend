@@ -4,7 +4,9 @@ import "./index.css";
 import LandingPage from "./components/LandingPage";
 import reportWebVitals from "./reportWebVitals";
 import Hero from "./components/Hero";
-import Recharge from "./components/Recharge"
+import Recharge from "./components/Recharge";
+import Transfer from "./components/Transfer";
+import Team from "./components/Team";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 ReactDOM.render(
@@ -13,9 +15,10 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about-us" />
-        <Route path="/pay-bills"/>
-        <Route path="/transfer" />
-        <Route path="/recharge" element={<Recharge />}/>
+        <Route path="/pay-bills" />
+        <Route path="/transfer" element={<Transfer />} />
+        <Route path="/recharge" element={<Recharge />} />
+        <Route path="/team" element={<Team />} />
       </Routes>
     </Router>
   </React.StrictMode>,

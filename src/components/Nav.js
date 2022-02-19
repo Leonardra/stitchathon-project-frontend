@@ -8,7 +8,7 @@ const Nav = () => {
   const [rotate, setRotate] = useState(0);
   const [space, setSpace] = useState(7);
   return (
-    <Container sx={{ mt: "56px" }} >
+    <Container sx={{ mt: "56px" }}>
       <Stack direction="row" justifyContent="space-between" alignItems="center">
         <Stack
           direction="row"
@@ -17,8 +17,9 @@ const Nav = () => {
           spacing="10px"
         >
           <img src={Logo} alt="logo" />
-          <Typography fontWeight="500"
-            fontSize="40px">Stitchr</Typography>
+          <Typography fontWeight="500" fontSize="40px">
+            Stitchr
+          </Typography>
         </Stack>
         <Stack
           direction="row"
@@ -26,21 +27,34 @@ const Nav = () => {
           alignItems="center"
           spacing="50px"
         >
-          <Link sx={{ textDecoration: "none", cursor: "pointer" }} ><Typography fontWeight="400"
-            fontSize="18px" color="#000">about</Typography></Link>
+          <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
+            <Typography fontWeight="400" fontSize="18px" color="#000">
+              about
+            </Typography>
+          </Link>
           <Stack
             direction="row"
             justifyContent="space-between"
             alignItems="center"
             spacing="12px"
           >
-            <Typography fontWeight="400"
-              fontSize="18px">menu</Typography>
+            <Typography fontWeight="400" fontSize="18px">
+              menu
+            </Typography>
             <Card
               elevation={0}
-              onMouseEnter={() => { setRotate(45); setSpace(0) }}
-              onMouseLeave={() => { setRotate(0); setSpace(7) }}
-              sx={{ background: space === 7 ? "#fff" : "#000", borderRadius: "100%" }}
+              onMouseEnter={() => {
+                setRotate(45);
+                setSpace(0);
+              }}
+              onMouseLeave={() => {
+                setRotate(0);
+                setSpace(7);
+              }}
+              sx={{
+                background: space === 7 ? "#fff" : "#000",
+                borderRadius: "100%",
+              }}
             >
               <Stack
                 sx={{ height: "70px", width: "70px" }}
@@ -51,13 +65,19 @@ const Nav = () => {
                 <Box
                   width="45px"
                   height="2px"
-                  sx={{ background: space === 7 ? "#000" : "#fff", transform: `rotate(${rotate}deg)` }}
+                  sx={{
+                    background: space === 7 ? "#000" : "#fff",
+                    transform: `rotate(${rotate}deg)`,
+                  }}
                 />
                 <Box
                   width="45px"
                   height="2px"
                   backgroundColor="#000"
-                  sx={{ background: space === 7 ? "#000" : "#fff", transform: `rotate(-${rotate}deg)` }}
+                  sx={{
+                    background: space === 7 ? "#000" : "#fff",
+                    transform: `rotate(-${rotate}deg)`,
+                  }}
                 />
               </Stack>
             </Card>
