@@ -17,7 +17,7 @@ ReactDOM.render(
     <Router>
       <Nav />
       <Routes>
-        <Route path="/" element={<LoginForm />} />
+        <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/stitchr" element={<LandingPage />} />
         <Route path="/about-us" element={<About />} />
