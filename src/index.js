@@ -8,6 +8,7 @@ import Nav from "./components/Nav";
 import Recharge from "./components/Recharge";
 import ErrorPage from "./components/ErrorPage";
 import TeamPage from "./components/Team";
+import About from "./components/About";
 import RegisterForm from "./components/RegisterForm";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -19,7 +20,7 @@ ReactDOM.render(
         <Route path="/" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/stitchr" element={<LandingPage />} />
-        <Route path="/about-us" />
+        <Route path="/about-us" element={<About />} />
         <Route path="/pay-bills" />
         <Route path="/transfer" />
         <Route path="/recharge" element={<Recharge />} />
