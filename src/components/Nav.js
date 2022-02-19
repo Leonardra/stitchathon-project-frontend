@@ -21,8 +21,12 @@ const Nav = () => {
   }, []);
   return (
     <>
-      <Container sx={{ mt: "56px" }} >
-        <Stack direction="row" justifyContent="space-between" alignItems="center">
+      <Container sx={{ mt: "56px" }}>
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+        >
           <Stack
             direction="row"
             justifyContent="space-between"
@@ -30,8 +34,9 @@ const Nav = () => {
             spacing="10px"
           >
             <img src={Logo} alt="logo" />
-            <Typography fontWeight="500"
-              fontSize="40px">Stitchr</Typography>
+            <Typography fontWeight="500" fontSize="40px">
+              Stitchr
+            </Typography>
           </Stack>
           <Stack
             direction="row"
@@ -39,14 +44,25 @@ const Nav = () => {
             alignItems="center"
             spacing="50px"
           >
-            <Link sx={{ textDecoration: "none", cursor: "pointer" }} >
-              <Typography fontWeight="400" fontSize="18px" color="#000">about</Typography>
+            <Link
+              sx={{ textDecoration: "none", cursor: "pointer" }}
+              onClick={() => {
+                navigate("/about-us");
+              }}
+            >
+              <Typography fontWeight="400" fontSize="18px" color="#000">
+                about
+              </Typography>
             </Link>
             <Card
               elevation={0}
               onClick={() => setOpenDrawer(!openDrawer)}
-              onMouseEnter={() => { setHover(true) }}
-              onMouseLeave={() => { setHover(false) }}
+              onMouseEnter={() => {
+                setHover(true);
+              }}
+              onMouseLeave={() => {
+                setHover(false);
+              }}
               sx={{ background: hover ? "#000" : "#fff", borderRadius: "10%" }}
             >
               <Stack
@@ -70,17 +86,34 @@ const Nav = () => {
           </Stack>
         </Stack>
       </Container>
-      <Container>
-
-      </Container>
-      <Drawer anchor="right" open={openDrawer} onClose={() => setOpenDrawer(false)}>
-        <Box sx={{ minWidth: "100vw", minHeight: "100vh", backgroundColor: "#fff" }}>
-          <Grid container marginTop="56px" paddingRight={10} justifyContent="flex-end">
+      <Container></Container>
+      <Drawer
+        anchor="right"
+        open={openDrawer}
+        onClose={() => setOpenDrawer(false)}
+      >
+        <Box
+          sx={{
+            minWidth: "100vw",
+            minHeight: "100vh",
+            backgroundColor: "#fff",
+          }}
+        >
+          <Grid
+            container
+            marginTop="56px"
+            paddingRight={10}
+            justifyContent="flex-end"
+          >
             <Card
               elevation={0}
               onClick={() => setOpenDrawer(!openDrawer)}
-              onMouseEnter={() => { setHover(true) }}
-              onMouseLeave={() => { setHover(false) }}
+              onMouseEnter={() => {
+                setHover(true);
+              }}
+              onMouseLeave={() => {
+                setHover(false);
+              }}
               sx={{ background: hover ? "#000" : "#fff", borderRadius: "100%" }}
             >
               <Stack
@@ -92,25 +125,38 @@ const Nav = () => {
                 <Box
                   width="45px"
                   height="2px"
-                  sx={{ background: hover ? "#fff" : "#000", transform: `rotate(45deg)` }}
+                  sx={{
+                    background: hover ? "#fff" : "#000",
+                    transform: `rotate(45deg)`,
+                  }}
                 />
                 <Box
                   width="45px"
                   height="2px"
-                  sx={{ background: hover ? "#fff" : "#000", transform: `rotate(-45deg)` }}
+                  sx={{
+                    background: hover ? "#fff" : "#000",
+                    transform: `rotate(-45deg)`,
+                  }}
                 />
               </Stack>
             </Card>
           </Grid>
-          <Grid container marginTop="40px" direction="column" justifyContent='space-evenly' alignItems="center" spacing={7}>
+          <Grid
+            container
+            marginTop="40px"
+            direction="column"
+            justifyContent="space-evenly"
+            alignItems="center"
+            spacing={7}
+          >
             <Grid item data-aos="fade-left">
-              <Link sx={{ textDecoration: "none", cursor: "pointer" }}
-                onClick={
-                  () => {
-                    navigate('/recharge');
-                    setOpenDrawer(false)
-                  }
-                } >
+              <Link
+                sx={{ textDecoration: "none", cursor: "pointer" }}
+                onClick={() => {
+                  navigate("/recharge");
+                  setOpenDrawer(false);
+                }}
+              >
                 <Typography
                   fontWeight="400"
                   color="#d3d3d3"
@@ -120,7 +166,7 @@ const Nav = () => {
                     pointer: "cursor",
                     "&:hover": {
                       color: "#000",
-                      fontWeight: "700"
+                      fontWeight: "700",
                     },
                   }}
                 >
@@ -129,13 +175,13 @@ const Nav = () => {
               </Link>
             </Grid>
             <Grid item data-aos="fade-right">
-              <Link sx={{ textDecoration: "none", cursor: "pointer" }}
-                onClick={
-                  () => {
-                    navigate('/team');
-                    setOpenDrawer(false)
-                  }
-                } >
+              <Link
+                sx={{ textDecoration: "none", cursor: "pointer" }}
+                onClick={() => {
+                  navigate("/team");
+                  setOpenDrawer(false);
+                }}
+              >
                 <Typography
                   fontWeight="400"
                   color="#d3d3d3"
@@ -145,7 +191,7 @@ const Nav = () => {
                     pointer: "cursor",
                     "&:hover": {
                       color: "#000",
-                      fontWeight: "700"
+                      fontWeight: "700",
                     },
                   }}
                 >
@@ -154,6 +200,7 @@ const Nav = () => {
               </Link>
             </Grid>
             <Grid item data-aos="fade-left">
+<<<<<<< HEAD
               <Link sx={{ textDecoration: "none", cursor: "pointer" }}
                 onClick={
                   () => {
@@ -161,6 +208,15 @@ const Nav = () => {
                     setOpenDrawer(false)
                   }
                 } >
+=======
+              <Link
+                sx={{ textDecoration: "none", cursor: "pointer" }}
+                onClick={() => {
+                  navigate("/recharge");
+                  setOpenDrawer(false);
+                }}
+              >
+>>>>>>> 5cd58107c47f9b1a4b3c9473a94878bf232e9e48
                 <Typography
                   fontWeight="400"
                   color="#d3d3d3"
@@ -170,7 +226,7 @@ const Nav = () => {
                     pointer: "cursor",
                     "&:hover": {
                       color: "#000",
-                      fontWeight: "700"
+                      fontWeight: "700",
                     },
                   }}
                 >
@@ -178,7 +234,6 @@ const Nav = () => {
                 </Typography>
               </Link>
             </Grid>
-
           </Grid>
         </Box>
       </Drawer>

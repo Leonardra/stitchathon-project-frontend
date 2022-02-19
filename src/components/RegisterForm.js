@@ -64,7 +64,7 @@ const RegisterForm = () => {
           </Typography>
           <Link
             sx={{ textDecoration: "none", cursor: "pointer" }}
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/login")}
           >
             <Typography fontWeight="400" color="#000" fontSize="18px">
               Log In
