@@ -1,9 +1,5 @@
-import jwt, { SignOptions } from 'jsonwebtoken';
-import crypto from 'crypto';
-import fetch from 'node-fetch';
 
-
-export async function retrieveClientToken({ clientId = "", clientAssertion="" }) {
+export async function RetrieveClientToken({ clientId, clientAssertion }) {
 
     const body = {
         grant_type: 'client_credentials',
