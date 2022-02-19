@@ -124,7 +124,7 @@ const Nav = () => {
                     },
                   }}
                 >
-                  Contact Us
+                  Contact
                 </Typography>
               </Link>
             </Grid>
@@ -149,7 +149,7 @@ const Nav = () => {
                     },
                   }}
                 >
-                  The Team
+                  Our Team
                 </Typography>
               </Link>
             </Grid>
@@ -157,7 +157,7 @@ const Nav = () => {
               <Link sx={{ textDecoration: "none", cursor: "pointer" }}
                 onClick={
                   () => {
-                    navigate('/recharge');
+                    navigate('/sponsor');
                     setOpenDrawer(false)
                   }
                 } >
