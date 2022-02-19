@@ -7,6 +7,7 @@ import LoginForm from "./components/LoginForm";
 import Nav from "./components/Nav";
 import Recharge from "./components/Recharge"
 import ErrorPage from "./components/ErrorPage"
+import TeamPage from "./components/Team"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 ReactDOM.render(
@@ -20,6 +21,7 @@ ReactDOM.render(
         <Route path="/pay-bills" />
         <Route path="/transfer" />
         <Route path="/recharge" element={<Recharge />} />
+        <Route path="/team" element={<TeamPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>

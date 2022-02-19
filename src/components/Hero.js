@@ -37,10 +37,10 @@ const Hero = () => {
           >
             <Grid data-aos="fade-down-right">
               <Box>
-                <Link sx={{ textDecoration: "none", cursor: "pointer" }}
-                  onClick={
-                    () => navigate('/recharge')
-                  } >
+                <Link
+                  sx={{ textDecoration: "none", cursor: "pointer" }}
+                  onClick={() => navigate("/recharge")}
+                >
                   <Typography
                     fontWeight="400"
                     color="#d3d3d3"
@@ -50,7 +50,7 @@ const Hero = () => {
                       pointer: "cursor",
                       "&:hover": {
                         color: "#000",
-                        fontWeight: "700"
+                        fontWeight: "700",
                       },
                     }}
                   >
@@ -61,7 +61,10 @@ const Hero = () => {
             </Grid>
             <Grid data-aos="flip-up">
               <Box>
-                <Link sx={{ textDecoration: "none", cursor: "pointer" }} >
+                <Link
+                  sx={{ textDecoration: "none", cursor: "pointer" }}
+                  onClick={() => navigate("/transfer")}
+                >
                   <Typography
                     fontWeight="400"
                     color="#d3d3d3"
@@ -71,7 +74,7 @@ const Hero = () => {
                       pointer: "cursor",
                       "&:hover": {
                         color: "#000",
-                        fontWeight: "700"
+                        fontWeight: "700",
                       },
                     }}
                   >
@@ -82,7 +85,7 @@ const Hero = () => {
             </Grid>
             <Grid data-aos="fade-up-left">
               <Box>
-                <Link sx={{ textDecoration: "none", cursor: "pointer" }} >
+                <Link sx={{ textDecoration: "none", cursor: "pointer" }}>
                   <Typography
                     fontWeight="400"
                     color="#d3d3d3"
@@ -92,7 +95,7 @@ const Hero = () => {
                       pointer: "cursor",
                       "&:hover": {
                         color: "#000",
-                        fontWeight: "700"
+                        fontWeight: "700",
                       },
                     }}
                   >
@@ -101,15 +104,13 @@ const Hero = () => {
                 </Link>
               </Box>
             </Grid>
-          </Grid >
+          </Grid>
         </Stack>
         <Stack sx={{ mt: "300px" }} width="800px">
-          <Typography fontWeight="400"
-            fontSize="18px">
+          <Typography fontWeight="400" fontSize="18px">
             Leading payment system with one solid payment
           </Typography>
-          <Typography fontWeight="400"
-            fontSize="18px">
+          <Typography fontWeight="400" fontSize="18px">
             infrastructure. We help you pay with your stitched accounts.
           </Typography>
         </Stack>

@@ -132,7 +132,7 @@ const Nav = () => {
               <Link sx={{ textDecoration: "none", cursor: "pointer" }}
                 onClick={
                   () => {
-                    navigate('/recharge');
+                    navigate('/team');
                     setOpenDrawer(false)
                   }
                 } >
