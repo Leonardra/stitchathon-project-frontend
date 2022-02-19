@@ -207,13 +207,13 @@ const Nav = () => {
               </Link>
             </Grid>
             <Grid item data-aos="fade-left">
-              <Link
-                sx={{ textDecoration: "none", cursor: "pointer" }}
-                onClick={() => {
-                  navigate("/recharge");
-                  setOpenDrawer(false);
-                }}
-              >
+              <Link sx={{ textDecoration: "none", cursor: "pointer" }}
+                onClick={
+                  () => {
+                    navigate('/sponsor');
+                    setOpenDrawer(false)
+                  }
+                } >
                 <Typography
                   fontWeight="400"
                   color="#d3d3d3"
